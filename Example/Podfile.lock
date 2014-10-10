@@ -1,0 +1,19 @@
+PODS:
+  - MRRealmResultsController (0.0.1):
+    - Realm
+  - Realm (0.86.2):
+    - Realm/Headers
+  - Realm/Headers (0.86.2)
+
+DEPENDENCIES:
+  - MRRealmResultsController (from `../`)
+
+EXTERNAL SOURCES:
+  MRRealmResultsController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MRRealmResultsController: 4458ee2e818269082adf6a66c85b82d4fdde501f
+  Realm: 50c570655ff10c4311e6929e621f50ab619cf939
+
+COCOAPODS: 0.33.1
