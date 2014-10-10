@@ -24,6 +24,7 @@
 #import <Realm/Realm.h>
 
 
+// Implementation of the `MRRealmSectionInfo` protocol.
 @interface MRRealmSectionInfo : NSObject <MRRealmSectionInfo>
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *keyPath;
@@ -38,6 +39,7 @@
 
 @implementation MRRealmSectionInfo
 
+// Returns a new instance of the receiver configured with the given parameters.
 + (instancetype)mr_sectionInfoWithName:(NSString *const)name
                                keyPath:(NSString *const)keyPath
                              predicate:(NSPredicate *const)predicate
@@ -102,7 +104,7 @@
     NSMutableArray *_sectionIndexTitlesSections;
     NSArray *_sectionFirstObjectIndexes;
 }
-@property (nonatomic, assign) Class objectsClass;
+// Change tracking notification token.
 @property (nonatomic, strong) RLMNotificationToken *notification;
 @end
 
@@ -145,7 +147,7 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
 
 - (void)performFetch
 {
-    if (_fetchedObjects == nil) { // TODO: FIXME: move to accessors
+    if (_fetchedObjects == nil) {
         NSPredicate *const predicate = self.predicate;
         RLMArray *array;
         if (predicate) {
@@ -162,7 +164,7 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
         }
     }
 
-    // TODO: update data structures instead of re-creating them --
+    // TODO: update data structures instead of re-creating them ----------------
     _sectionIndexTitles = nil;
     _sectionIndexTitlesSections = nil;
     
@@ -170,7 +172,7 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
     NSArray *const sectionNames = [self mr_sectionNames:&firstObjectIndexes];
     _sectionFirstObjectIndexes = firstObjectIndexes;
     _sections = [self mr_sectionsWithNames:sectionNames];
-    // --
+    // -------------------------------------------------------------------------
     
     if (self.notification == nil) {
         [self mr_addNotification];
@@ -252,10 +254,8 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
             indexTitle = sectionName;
         } if (sectionName.length == 1) {
             indexTitle = sectionName.uppercaseString;
-        } else if (sectionName.length == 2) {
-            indexTitle = sectionName.uppercaseString;
         } else {
-            indexTitle = [sectionName substringToIndex:2].uppercaseString;
+            indexTitle = [sectionName substringToIndex:1].uppercaseString;
         }
     }
     
@@ -321,7 +321,7 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
         [delegate controllerWillChangeContent:self];
     }
     
-    // FIXME: 'per object notifications' will allow more efficient data refreshing --
+    // FIXME: 'per object notifications' will allow more efficient reloading ---
     // (https://github.com/realm/realm-cocoa/issues/601)
     if (_didChangeSectionDelegate) {
         NSArray *const oldSections = self.sections;
@@ -330,7 +330,7 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
     } else {
         [self performFetch];
     }
-    // --
+    // -------------------------------------------------------------------------
     
     if (_didChangeContentDelegate) {
         [delegate controllerDidChangeContent:self];
@@ -400,9 +400,9 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
 // Returns the sections for the fetchedObjects given their names and extra sort.
 - (NSArray *)mr_sectionsWithNames:(NSArray *const)sectionNames
 {
-    // TODO: current implementation ignores section --
+    // TODO: current implementation ignores section ----------------------------
     NSSortDescriptor *const secondarySort = [self mr_secondarySortForSection:NSNotFound];
-    // --
+    // -------------------------------------------------------------------------
     NSString *const sectionNameKeyPath = self.sectionNameKeyPath;
     RLMArray *const fetchedObjects = self.fetchedObjects;
     NSPredicate *const predicate = self.predicate;
@@ -416,11 +416,11 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
             (NSNull.null == (id)candidate ? nil : candidate);
             NSString *const format =
             [NSString stringWithFormat:@"%@ = %%@", sectionNameKeyPath];
-            // FIXME: 'Chaining queries' did not work --
-            // (https://github.com/realm/realm-cocoa/issues/927) --
+            // FIXME: 'Chaining queries' did not work --------------------------
+            // (https://github.com/realm/realm-cocoa/issues/927)
             //            NSPredicate *const sectionPredicate =
             //            [NSPredicate predicateWithFormat:format, sectionName];
-            // --
+            // -----------------------------------------------------------------
             NSPredicate *const namePredicate  =
             [NSPredicate predicateWithFormat:format, sectionName];
             NSPredicate *sectionPredicate;
