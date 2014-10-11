@@ -1,4 +1,4 @@
-// MRRealmResultsController.h
+// MRRealmResultsController.m
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -219,9 +219,11 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
             for (NSNumber *const firstNumber in _sectionFirstObjectIndexes) {
                 NSUInteger const first = firstNumber.unsignedIntegerValue;
                 if (first > index) {
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
                     NSAssert(candidateSection > 0,
                              @"unsigned integer candidateSection should be "
                              @"greater than 0 before it can be decremented");
+#endif
                     candidateSection -= 1;
                     break;
                 } else if (first == index) {
@@ -233,8 +235,10 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
             NSNumber *const firstIndexNumber =
             _sectionFirstObjectIndexes[candidateSection];
             NSInteger const firstIndex = firstIndexNumber.integerValue;
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
             NSAssert(index >= firstIndex,
                      @"index should be greater or equal than firstIndex");
+#endif
             NSInteger const row = index - firstIndex;
             indexPath = [NSIndexPath indexPathForRow:row inSection:candidateSection];
         }
@@ -314,7 +318,9 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
 // Notifies the changes to the delegate and performs a new fetch.
 - (void)mr_reloadData
 {
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
     NSAssert(self.sections != nil, @"cannot reload without data already loaded");
+#endif
     
     id<MRRealmResultsControllerDelegate> const delegate = self.delegate;
     if (_willChangeContentDelegate) {
@@ -353,7 +359,9 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
 // Returns the secondary sort descriptor (used for re-sorting section objects).
 - (NSSortDescriptor *)mr_secondarySortForSection:(NSInteger const)section
 {
-    NSAssert(section > 0, @"invalid section parameter %ld", (long)section);
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
+    NSAssert(section >= 0, @"invalid section parameter %ld", (long)section);
+#endif
     
     NSSortDescriptor *secondarySort;
     if (self.sectionNameKeyPath) {
@@ -383,10 +391,12 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
                 ![sectionName isEqual:previousName]) {
                 previousName = sectionName;
                 [sectionNames addObject:(sectionName ?: NSNull.null)];
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
                 NSAssert(![firstObjectIndexes containsObject:@(index)],
                          @"_sectionFirstObjectIndexes already contains "
                          @"index %lu",
                          (unsigned long)index);
+#endif
                 [firstObjectIndexes addObject:@(index)];
             }
             index++;
@@ -473,8 +483,10 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
         _sectionFirstObjectIndexes[nextSection];
         NSUInteger const nextFirstIndex =
         nextFirstIndexNumber.unsignedIntegerValue;
+#if MR_REALM_RESULTS_CONTROLLER_DEBUG
         NSAssert(firstIndex < nextFirstIndex,
                  @"next section must start after section");
+#endif
         range = NSMakeRange(firstIndex, nextFirstIndex - firstIndex);
     } else {
         range = NSMakeRange(firstIndex, self.fetchedObjects.count - firstIndex);

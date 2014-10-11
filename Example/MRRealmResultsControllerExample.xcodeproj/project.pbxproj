@@ -318,7 +318,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "MRRealmResultsControllerExample/MRRealmResultsControllerExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
