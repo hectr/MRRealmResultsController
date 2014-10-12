@@ -1,0 +1,1216 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MRRealmResultsController Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">MRRealmResultsController </a></h1>
+				<a id="developerHome" href="../index.html">Héctor Marqués</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MRRealmResultsController Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/fetchedObjects">&nbsp;&nbsp;&nbsp;&nbsp;fetchedObjects</option>
+	
+	<option value="//api/name/objectsClass">&nbsp;&nbsp;&nbsp;&nbsp;objectsClass</option>
+	
+	<option value="//api/name/predicate">&nbsp;&nbsp;&nbsp;&nbsp;predicate</option>
+	
+	<option value="//api/name/realm">&nbsp;&nbsp;&nbsp;&nbsp;realm</option>
+	
+	<option value="//api/name/sectionIndexTitles">&nbsp;&nbsp;&nbsp;&nbsp;sectionIndexTitles</option>
+	
+	<option value="//api/name/sectionNameKeyPath">&nbsp;&nbsp;&nbsp;&nbsp;sectionNameKeyPath</option>
+	
+	<option value="//api/name/sectionSortDescriptor">&nbsp;&nbsp;&nbsp;&nbsp;sectionSortDescriptor</option>
+	
+	<option value="//api/name/sections">&nbsp;&nbsp;&nbsp;&nbsp;sections</option>
+	
+	<option value="//api/name/sortDescriptor">&nbsp;&nbsp;&nbsp;&nbsp;sortDescriptor</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/indexPathForObject:">&nbsp;&nbsp;&nbsp;&nbsp;- indexPathForObject:</option>
+	
+	<option value="//api/name/initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:</option>
+	
+	<option value="//api/name/objectAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- objectAtIndexPath:</option>
+	
+	<option value="//api/name/performFetch">&nbsp;&nbsp;&nbsp;&nbsp;- performFetch</option>
+	
+	<option value="//api/name/sectionForSectionIndexTitleAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- sectionForSectionIndexTitleAtIndex:</option>
+	
+	<option value="//api/name/sectionIndexTitleForSectionName:">&nbsp;&nbsp;&nbsp;&nbsp;- sectionIndexTitleForSectionName:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchedObjects">fetchedObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectsClass">objectsClass</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/predicate">predicate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/realm">realm</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionIndexTitles">sectionIndexTitles</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionNameKeyPath">sectionNameKeyPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionSortDescriptor">sectionSortDescriptor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sections">sections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sortDescriptor">sortDescriptor</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexPathForObject:">indexPathForObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:">initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectAtIndexPath:">objectAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performFetch">performFetch</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionForSectionIndexTitleAtIndex:">sectionForSectionIndexTitleAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionIndexTitleForSectionName:">sectionIndexTitleForSectionName:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MRRealmResultsController Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MRRealmResultsController Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MRRealmResultsController.h<br />MRRealmResultsController.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class is intended to provide <code>NSFetchedResultsController</code>-like
+functionality for use with
+<strong><a href="https://github.com/realm/realm-cocoa/">realm-cocoa</a></strong>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:">&ndash;&nbsp;initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:</a></code>
+		<span class="tooltip"><p>Initializes an instance of <code>MRRealmResultsController</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/performFetch">&ndash;&nbsp;performFetch</a></code>
+		<span class="tooltip"><p>Computes section information, begins change tracking and sets <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/realm">&nbsp;&nbsp;realm</a></code>
+		<span class="tooltip"><p>The <em>Realm</em> instance.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsClass">&nbsp;&nbsp;objectsClass</a></code>
+		<span class="tooltip"><p>Specific subclass of <code>RLMObject</code> used in the queries.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/predicate">&nbsp;&nbsp;predicate</a></code>
+		<span class="tooltip"><p>Predicate used for querying <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sortDescriptor">&nbsp;&nbsp;sortDescriptor</a></code>
+		<span class="tooltip"><p>Sort descriptor used for sorting the results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionSortDescriptor">&nbsp;&nbsp;sectionSortDescriptor</a></code>
+		<span class="tooltip"><p>Sort descriptor used to pre-compute the section information.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionNameKeyPath">&nbsp;&nbsp;sectionNameKeyPath</a></code>
+		<span class="tooltip"><p>Section name keypath on resulting objects.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>Receiver&rsquo;s delegate.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchedObjects">&nbsp;&nbsp;fetchedObjects</a></code>
+		<span class="tooltip"><p>Returns the results of the <em>fetch</em>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectAtIndexPath:">&ndash;&nbsp;objectAtIndexPath:</a></code>
+		<span class="tooltip"><p>Returns the <em>fetched</em> object at a given indexPath.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexPathForObject:">&ndash;&nbsp;indexPathForObject:</a></code>
+		<span class="tooltip"><p>Returns the indexPath of a given object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionIndexTitleForSectionName:">&ndash;&nbsp;sectionIndexTitleForSectionName:</a></code>
+		<span class="tooltip"><p>Returns the corresponding <em>section index</em> title for the given section name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionIndexTitles">&nbsp;&nbsp;sectionIndexTitles</a></code>
+		<span class="tooltip"><p>Returns the array of <em>section</em> index titles.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sections">&nbsp;&nbsp;sections</a></code>
+		<span class="tooltip"><p>Returns an array of objects that implement the <a href="../Classes/MRRealmSectionInfo.html"><code>MRRealmSectionInfo</code></a> protocol.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionForSectionIndexTitleAtIndex:">&ndash;&nbsp;sectionForSectionIndexTitleAtIndex:</a></code>
+		<span class="tooltip"><p>Returns the section number for a given <em>section index</em> index.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Receiver&rsquo;s delegate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;MRRealmResultsControllerDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Receiver&rsquo;s delegate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchedObjects" title="fetchedObjects"></a>
+	<h3 class="subsubtitle method-title">fetchedObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the results of the <em>fetch</em>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) RLMArray *fetchedObjects</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the results of the <em>fetch</em>.</p>
+
+<p>Returns <code>nil</code> if <a href="#//api/name/performFetch"><code>performFetch</code></a> hasn&rsquo;t been called.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectsClass" title="objectsClass"></a>
+	<h3 class="subsubtitle method-title">objectsClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specific subclass of <code>RLMObject</code> used in the queries.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) Class objectsClass</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specific subclass of <code>RLMObject</code> used in the queries.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/predicate" title="predicate"></a>
+	<h3 class="subsubtitle method-title">predicate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Predicate used for querying <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSPredicate *predicate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Predicate used for querying <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/realm" title="realm"></a>
+	<h3 class="subsubtitle method-title">realm</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <em>Realm</em> instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RLMRealm *realm</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <em>Realm</em> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionIndexTitles" title="sectionIndexTitles"></a>
+	<h3 class="subsubtitle method-title">sectionIndexTitles</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the array of <em>section</em> index titles.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *sectionIndexTitles</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the array of <em>section</em> index titles.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionNameKeyPath" title="sectionNameKeyPath"></a>
+	<h3 class="subsubtitle method-title">sectionNameKeyPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Section name keypath on resulting objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *sectionNameKeyPath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Section name keypath on resulting objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionSortDescriptor" title="sectionSortDescriptor"></a>
+	<h3 class="subsubtitle method-title">sectionSortDescriptor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sort descriptor used to pre-compute the section information.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSortDescriptor *sectionSortDescriptor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sort descriptor used to pre-compute the section information.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sections" title="sections"></a>
+	<h3 class="subsubtitle method-title">sections</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of objects that implement the <a href="../Classes/MRRealmSectionInfo.html"><code>MRRealmSectionInfo</code></a> protocol.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *sections</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an array of objects that implement the <a href="../Classes/MRRealmSectionInfo.html"><code>MRRealmSectionInfo</code></a> protocol.</p>
+
+<p>Returns <code>nil</code> if <a href="#//api/name/performFetch"><code>performFetch</code></a> hasn&rsquo;t been called.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sortDescriptor" title="sortDescriptor"></a>
+	<h3 class="subsubtitle method-title">sortDescriptor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sort descriptor used for sorting the results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSortDescriptor *sortDescriptor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sort descriptor used for sorting the results.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/indexPathForObject:" title="indexPathForObject:"></a>
+	<h3 class="subsubtitle method-title">indexPathForObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the indexPath of a given object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSIndexPath *)indexPathForObject:(id)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>An object in the receiver&rsquo;s <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The index path of the object or <code>nil</code> if the object is not contained in
+the receiver&rsquo;s <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the indexPath of a given object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:" title="initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:"></a>
+	<h3 class="subsubtitle method-title">initWithClass:predicate:realm:sortDescriptor:sectionSortDescriptor:andNameKeyPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes an instance of <code>MRRealmResultsController</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithClass:(Class)<em>objectClass</em> predicate:(NSPredicate *)<em>predicate</em> realm:(RLMRealm *)<em>realmOrNil</em> sortDescriptor:(NSSortDescriptor *)<em>sortDescriptor</em> sectionSortDescriptor:(NSSortDescriptor *)<em>sectionSortDescriptorOrNil</em> andNameKeyPath:(NSString *)<em>sectionNameKeyPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectClass</em></dt>
+			<dd><p>Specific <code>RLMObject</code> subclass used in the queries.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>predicate</em></dt>
+			<dd><p>The <a href="#//api/name/predicate">predicate</a> used for querying <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sortDescriptor</em></dt>
+			<dd><p>The sort descriptor used for sorting the results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionSortDescriptorOrNil</em></dt>
+			<dd><p>A sort descriptor that will be used to
+pre-compute the section information (must match the <a href="#//api/name/sectionNameKeyPath"><code>sectionNameKeyPath</code></a>
+parameter).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionNameKeyPath</em></dt>
+			<dd><p>Keypath on resulting objects that returns the section
+name. This will be used to pre-compute the section information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>realm</em></dt>
+			<dd><p>The <em>Realm</em> instance in the main thread.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver initialized with the specified parameters.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes an instance of <code>MRRealmResultsController</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectAtIndexPath:" title="objectAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">objectAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <em>fetched</em> object at a given indexPath.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)objectAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path in the <em>fetch</em> results.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The object at a given index path in the receiver&rsquo;s <em>fetch</em> results.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the <em>fetched</em> object at a given indexPath.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/performFetch" title="performFetch"></a>
+	<h3 class="subsubtitle method-title">performFetch</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Computes section information, begins change tracking and sets <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)performFetch</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Computes section information, begins change tracking and sets <a href="#//api/name/fetchedObjects"><code>fetchedObjects</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionForSectionIndexTitleAtIndex:" title="sectionForSectionIndexTitleAtIndex:"></a>
+	<h3 class="subsubtitle method-title">sectionForSectionIndexTitleAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the section number for a given <em>section index</em> index.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)sectionForSectionIndexTitleAtIndex:(NSInteger)<em>sectionIndex</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionIndex</em></dt>
+			<dd><p>The index of the section.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The section number for the given section index in the <em>section index</em>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the section number for a given <em>section index</em> index.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionIndexTitleForSectionName:" title="sectionIndexTitleForSectionName:"></a>
+	<h3 class="subsubtitle method-title">sectionIndexTitleForSectionName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the corresponding <em>section index</em> title for the given section name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)sectionIndexTitleForSectionName:(NSString *)<em>sectionName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionName</em></dt>
+			<dd><p>The name of the section.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <em>section index</em> title corresponding to the given section name.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the corresponding <em>section index</em> title for the given section name.</p>
+
+<p>Default implementation returns the capitalized first letter of <code>sectionName</code>
+parameter.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRRealmResultsController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Héctor Marqués. All rights reserved. (Last updated: 2014-10-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
