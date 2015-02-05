@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/hectr/MRRealmResultsController.git", :tag => s.version.to_s }
   s.source_files = "MRRealmResultsController"
   # s.library    = "libc++"
-  s.dependency   "Realm"
+  s.dependency   "Realm", "0.90.5"
   s.requires_arc = true
   s.platform     = :ios, '6.0'
 
