@@ -74,8 +74,8 @@
             [sourceObjects objectsWithPredicate:predicate];
             NSSortDescriptor *const sort = self.secondarySort;
             if (sort) {
-                _objects = [unsortedObjects arraySortedByProperty:sort.key
-                                                        ascending:sort.ascending];
+                _objects = [unsortedObjects sortedResultsUsingProperty:sort.key
+                                                             ascending:sort.ascending];
             } else {
                 _objects = unsortedObjects;
             }
@@ -157,8 +157,8 @@ sectionSortDescriptor:(NSSortDescriptor *const)sectionSortDescriptorOrNil
         }
         NSSortDescriptor *const primarySort = self.mr_primarySort;
         if (primarySort) {
-            _fetchedObjects = [array arraySortedByProperty:primarySort.key
-                                                 ascending:primarySort.ascending];
+            _fetchedObjects = [array sortedResultsUsingProperty:primarySort.key
+                                                      ascending:primarySort.ascending];
         } else {
             _fetchedObjects = array;
         }
