@@ -79,3 +79,4 @@ Perform the following steps:
 
 - [RLMFetchedResultsController](https://github.com/Krivoblotsky/RealmDemo/tree/master/RealmDemo/RLMFetchedResultsController)
 - [RBQFetchedResultsController](https://github.com/Roobiq/RBQFetchedResultsController)
+- [RealmResultsController](https://github.com/redbooth/RealmResultsController)
